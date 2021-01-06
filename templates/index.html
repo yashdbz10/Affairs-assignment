@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Women Affairs</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body>
+<div class="content">
+    <h1 style="text-align: center">Affairs predict</h1>
+
+    <div class="form">
+        <form action=" /predict" method="POST">
+            <input type="text" name="Intercept" id="Intercept" required="required" />
+            <input type="text" name="occ_2" id="occ_2" required="required" />
+            <input type="text" name="occ_3" id="occ_3" required="required" />
+            <input type="text" name="occ_4" id="occ_4" required="required" />
+            <input type="text" name="occ_5" id="occ_5" required="required" />
+            <input type="text" name="occ_6" id="occ_6" required="required" />
+            <input type="text" name="occ_husb_2" id="occ_husb_2" required="required" />
+            <input type="text" name="occ_husb_3" id="occ_husb_3" required="required" />
+            <input type="text" name="occ_husb_4" id="occ_husb_4" required="required" />
+            <input type="text" name="occ_husb_5" id="occ_husb_5" required="required" />
+            <input type="text" name="occ_husb_6" id="occ_husb_6" required="required" />
+            <input type="text" name="rate_marriage" id="rate_marriage" required="required" />
+            <input type="text" name="age" id="age" required="required" />
+            <input type="text" name="yrs_married" id="yrs_married" required="required" />
+            <input type="text" name="children" id="children" required="required" />
+            <input type="text" name="religious" id="religious" required="required" />
+            <input type="text" name="educ" id="educ" required="required" />
+
+            <button type="submit" class="btn btn-primay btn-block btn-large">predict</button>
+        </form>
+
+        <br>
+        <br>
+        {{ prediction_text }}
+
+    </div>
+</div>
+
+
+</body>
+</html>
